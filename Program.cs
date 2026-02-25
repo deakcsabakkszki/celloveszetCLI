@@ -4,7 +4,15 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            string[] adatok = File.ReadAllLines("lovesek.csv");
+            List<CelLovo> celLovok = new List<CelLovo>();
+
+            foreach (var item in adatok)
+            {
+                celLovok.Add(new CelLovo(item));
+            }
+
+
         }
     }
 }
